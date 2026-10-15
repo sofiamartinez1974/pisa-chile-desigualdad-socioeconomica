@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "line", "strokeWidth": 3}, "encoding": {"color": {"field": "quintil_socioeconomico", "scale": {"domain": ["Bajo", "Medio bajo", "Medio", "Medio alto", "Alto"], "range": ["#237B75", "#72AAA3", "#9B9B9B", "#E7A46C", "#D75A4A"]}, "sort": ["Bajo", "Medio bajo", "Medio", "Medio alto", "Alto"], "title": "Quintil socioecon\u00f3mico", "type": "nominal"}, "tooltip": [{"field": "anio", "title": "A\u00f1o", "type": "ordinal"}, {"field": "quintil_socioeconomico", "title": "Quintil", "type": "nominal"}, {"field": "puntaje_lectura", "format": ".0f", "title": "Puntaje", "type": "quantitative"}], "x": {"field": "anio", "sort": [2006, 2009, 2012, 2015, 2018, 2022], "title": "A\u00f1o de evaluaci\u00f3n", "type": "ordinal"}, "y": {"field": "puntaje_lectura", "scale": {"domain": [350, 540]}, "title": "Puntaje promedio en lectura", "type": "quantitative"}}, "name": "view_4"}, {"mark": {"type": "circle", "size": 85}, "encoding": {"color": {"field": "quintil_socioeconomico", "scale": {"domain": ["Bajo", "Medio bajo", "Medio", "Medio alto", "Alto"], "range": ["#237B75", "#72AAA3", "#9B9B9B", "#E7A46C", "#D75A4A"]}, "sort": ["Bajo", "Medio bajo", "Medio", "Medio alto", "Alto"], "title": "Quintil socioecon\u00f3mico", "type": "nominal"}, "tooltip": [{"field": "anio", "title": "A\u00f1o", "type": "ordinal"}, {"field": "quintil_socioeconomico", "title": "Quintil", "type": "nominal"}, {"field": "puntaje_lectura", "format": ".0f", "title": "Puntaje", "type": "quantitative"}], "x": {"field": "anio", "sort": [2006, 2009, 2012, 2015, 2018, 2022], "title": "A\u00f1o de evaluaci\u00f3n", "type": "ordinal"}, "y": {"field": "puntaje_lectura", "scale": {"domain": [350, 540]}, "title": "Puntaje promedio en lectura", "type": "quantitative"}}}], "data": {"name": "data-96385798b27422ee403edb226096aa28"}, "height": 420, "params": [{"name": "param_1", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales", "views": ["view_4"]}], "title": {"text": "La distancia lectora entre quintiles se estrecha", "anchor": "start", "subtitle": ["Chile, PISA 2006\u20132022", "La brecha entre el quintil m\u00e1s alto y el m\u00e1s bajo pas\u00f3 de 126 a 82 puntos."]}, "width": 750, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-96385798b27422ee403edb226096aa28": [{"anio": 2006, "quintil_socioeconomico": "Bajo", "puntaje_lectura": 391}, {"anio": 2006, "quintil_socioeconomico": "Medio bajo", "puntaje_lectura": 408}, {"anio": 2006, "quintil_socioeconomico": "Medio", "puntaje_lectura": 435}, {"anio": 2006, "quintil_socioeconomico": "Medio alto", "puntaje_lectura": 461}, {"anio": 2006, "quintil_socioeconomico": "Alto", "puntaje_lectura": 517}, {"anio": 2009, "quintil_socioeconomico": "Bajo", "puntaje_lectura": 406}, {"anio": 2009, "quintil_socioeconomico": "Medio bajo", "puntaje_lectura": 427}, {"anio": 2009, "quintil_socioeconomico": "Medio", "puntaje_lectura": 446}, {"anio": 2009, "quintil_socioeconomico": "Medio alto", "puntaje_lectura": 464}, {"anio": 2009, "quintil_socioeconomico": "Alto", "puntaje_lectura": 508}, {"anio": 2012, "quintil_socioeconomico": "Bajo", "puntaje_lectura": 395}, {"anio": 2012, "quintil_socioeconomico": "Medio bajo", "puntaje_lectura": 424}, {"anio": 2012, "quintil_socioeconomico": "Medio", "puntaje_lectura": 438}, {"anio": 2012, "quintil_socioeconomico": "Medio alto", "puntaje_lectura": 457}, {"anio": 2012, "quintil_socioeconomico": "Alto", "puntaje_lectura": 496}, {"anio": 2015, "quintil_socioeconomico": "Bajo", "puntaje_lectura": 414}, {"anio": 2015, "quintil_socioeconomico": "Medio bajo", "puntaje_lectura": 445}, {"anio": 2015, "quintil_socioeconomico": "Medio", "puntaje_lectura": 459}, {"anio": 2015, "quintil_socioeconomico": "Medio alto", "puntaje_lectura": 470}, {"anio": 2015, "quintil_socioeconomico": "Alto", "puntaje_lectura": 509}, {"anio": 2018, "quintil_socioeconomico": "Bajo", "puntaje_lectura": 409}, {"anio": 2018, "quintil_socioeconomico": "Medio bajo", "puntaje_lectura": 439}, {"anio": 2018, "quintil_socioeconomico": "Medio", "puntaje_lectura": 450}, {"anio": 2018, "quintil_socioeconomico": "Medio alto", "puntaje_lectura": 461}, {"anio": 2018, "quintil_socioeconomico": "Alto", "puntaje_lectura": 509}, {"anio": 2022, "quintil_socioeconomico": "Bajo", "puntaje_lectura": 413}, {"anio": 2022, "quintil_socioeconomico": "Medio bajo", "puntaje_lectura": 433}, {"anio": 2022, "quintil_socioeconomico": "Medio", "puntaje_lectura": 447}, {"anio": 2022, "quintil_socioeconomico": "Medio alto", "puntaje_lectura": 463}, {"anio": 2022, "quintil_socioeconomico": "Alto", "puntaje_lectura": 495}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
